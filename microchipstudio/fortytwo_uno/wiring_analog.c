@@ -359,7 +359,7 @@ void analogWrite( pin_size_t pin, int value )
   while ( (GCLK->PCHCTRL[timerClockIDs[timerIndex]].reg & GCLK_PCHCTRL_CHEN) == 0 );        // wait for sync
 #else
   GCLK->PCHCTRL[timerClockIDs[timerIndex]].reg = (GCLK_PCHCTRL_CHEN | GCLK_PCHCTRL_GEN_GCLK0);
-  while ( (GCLK->PCHCTRL[timerClockIDs[timerIndex]].reg & GCLK_PCHCTRL_CHEN) == 0 );        // wait for sync
+  while ( (GCLK->PCHCTRL[timerClockIDs[timerIndex]].reg & GCLK_PCHCTRL_CHEN) == 0 ){;}        // wait for sync
 #endif
 
       // Set PORT. Note that COUNT16 usually maps to the same location as COUNT8, so COUNT16 is used in most cases with both 8-bit and 16-bit.
