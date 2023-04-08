@@ -1,3 +1,0 @@
-[submodule "testing/usb-can"]
-	path = testing/usb-can
-	url = https://github.com/kobolt/usb-can
